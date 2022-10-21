@@ -1,0 +1,17 @@
+{
+  "name": "stardew-valley-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.0.1",
+    "graphql": "^16.6.0"
+  }
+}
