@@ -4,12 +4,12 @@ import { startStandaloneServer } from '@apollo/server/standalone';
 const typeDefs = `#graphql
 
   type Charecter {
-    id: number,
-    name: string,
-    marriage: boolean,
-    topGifts: [string],
-    address: string,
-    birthday: string
+    id: Number,
+    name: String,
+    marriage: Boolean,
+    topGifts: [String],
+    address: String,
+    birthday: String
   }
 
   type Query {
@@ -80,4 +80,4 @@ const server = new ApolloServer({
     listen: { port: 4000 },
   });
   
-  console.log(`🚀  Server ready at: ${url}`);
+  console.log(`Server ready at: ${url}`);
