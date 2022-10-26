@@ -8,9 +8,9 @@ import bodyParser from 'body-parser';
 
 // Schemas
 const typeDefs = `#graphql
-  type Query {
-    hello: String
-  }
+    type character{
+        
+    }
 `;
 
 //Resolvers
