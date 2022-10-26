@@ -6,14 +6,14 @@ import http from 'http';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 
-// The GraphQL schema
+// Schemas
 const typeDefs = `#graphql
   type Query {
     hello: String
   }
 `;
 
-// A map of functions which return data for the schema.
+//Resolvers
 const resolvers = {
   Query: {
     hello: () => 'world',
@@ -23,7 +23,7 @@ const resolvers = {
 const app = express();
 const httpServer = http.createServer(app);
 
-// Set up Apollo Server
+// Apollo Server
 const server = new ApolloServer({
   typeDefs,
   resolvers,
@@ -38,4 +38,4 @@ app.use(
 );
 
 await new Promise((resolve) => httpServer.listen({ port: 4000 }, resolve));
-console.log(`🚀 Server ready at http://localhost:4000`);
+console.log(`Server ready at http://localhost:4000`);
