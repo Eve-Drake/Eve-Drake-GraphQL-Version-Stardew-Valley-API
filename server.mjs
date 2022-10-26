@@ -13,9 +13,9 @@ const typeDefs = `#graphql
   }
 
   type Character {
-    id: Int,
-    name: String,
-    marriage: Boolean,
+    id: Int!,
+    name: String!,
+    marriage: Boolean!,
     topGifts: [String],
     address: String,
     birthday: String
