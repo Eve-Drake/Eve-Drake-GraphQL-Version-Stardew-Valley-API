@@ -9,7 +9,9 @@ import bodyParser from 'body-parser';
 // Schemas
 const typeDefs = `#graphql
   type Query {
-    characters:[Character]
+    characters:[Character!]!
+    maleMarrige: [Character!]!
+    femaleMarrige: [Character!]!
   }
 
   type Character {
@@ -27,7 +29,6 @@ const resolvers = {
   Query: {
     characters: () =>{
       return [
-        
         {id: 0, name : 'Alex', marriage: true, topGifts: ['Complete Breakfast', 'Salmon Dinner', 'Pearl'], address: '1 River Road', birthday: 'Summer: 13'},
         {id: 1, name : 'Elliot', marriage: true, topGifts: ['Lobster', 'Duck Feather', 'Squid Ink'], address: 'Elliot\'s Cabin', birthday: 'Fall: 5'},
         {id: 2, name : 'Harvey', marriage: true, topGifts: ['Coffee', 'Truffle Oil', 'Wine'], address: 'Medical Clinic', birthday: 'Winter: 14'},
@@ -72,7 +73,6 @@ const resolvers = {
         {id: 41, name : 'Marlon', marriage: false, address: 'The Adventures Guild',},
         {id: 42, name : 'Mr. Qi', marriage: false, address: 'Casino or Walnut Room',},
         {id: 43, name : 'Proffessor Snail', marriage: false, address: 'Island Field Office',},
-
       ]
     }
   }
