@@ -8,15 +8,24 @@ import bodyParser from 'body-parser';
 
 // Schemas
 const typeDefs = `#graphql
-    type character{
-        
-    }
+  type Query {
+    characters:[Character!]!
+  }
+
+  type Character {
+    id: Int,
+    name: String,
+    marriage: Boolean,
+    topGifts: [String],
+    address: String,
+    birthday: String
+  }
 `;
 
 //Resolvers
 const resolvers = {
   Query: {
-    hello: () => 'world',
+    
   },
 };
 
